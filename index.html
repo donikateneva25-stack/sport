@@ -1,0 +1,272 @@
+```html
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Спорт | Начало</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="hero">
+
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="video/sport-video.mov" type="video/quicktime">
+    </video>
+
+    <div class="hero-content">
+
+        <h1>Спорт</h1>
+
+        <p>
+            Движение, енергия и активен начин на живот
+        </p>
+
+    </div>
+
+</header>
+
+
+<nav class="main-nav">
+
+    <button class="menu-button" onclick="openMenu()">☰</button>
+
+    <div class="nav-links">
+
+        <a href="index.html">Начало</a>
+
+        <a href="info.html">Информация</a>
+
+        <a href="gallery.html">Галерия</a>
+
+        <a href="contact.html">Контакти</a>
+
+    </div>
+
+</nav>
+
+
+<div id="sideMenu" class="side-menu">
+
+    <button class="close-button" onclick="closeMenu()">×</button>
+
+    <h2>Меню</h2>
+
+
+    <!-- НАЧАЛО -->
+
+    <a href="index.html">🏠 Начало</a>
+
+
+    <!-- ВИДОВЕ СПОРТ -->
+
+    <div class="menu-category">
+
+        <button onclick="toggleSubmenu('sportMenu')">
+
+            🏃 Видове спорт <span>›</span>
+
+        </button>
+
+        <div id="sportMenu" class="submenu">
+
+            <a href="tennis.html">🎾 Тенис</a>
+
+            <a href="basketball.html">🏀 Баскетбол</a>
+
+            <a href="swimming.html">🏊 Плуване</a>
+
+            <a href="cycling.html">🚴 Колоездене</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ТРЕНИРОВКИ -->
+
+    <div class="menu-category">
+
+        <button onclick="toggleSubmenu('trainingMenu')">
+
+            💪 Тренировки <span>›</span>
+
+        </button>
+
+        <div id="trainingMenu" class="submenu">
+
+            <a href="beginners.html">Начинаещи</a>
+
+            <a href="cardio.html">Кардио</a>
+
+            <a href="strength.html">Силови тренировки</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ХРАНЕНЕ -->
+
+    <div class="menu-category">
+
+        <button onclick="toggleSubmenu('foodMenu')">
+
+            🥗 Хранене <span>›</span>
+
+        </button>
+
+        <div id="foodMenu" class="submenu">
+
+            <a href="healthy-food.html">Здравословно хранене</a>
+
+            <a href="food.html">Хранителен режим</a>
+
+            <a href="useful-foods.html">Полезни храни</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ДРУГИ СТРАНИЦИ -->
+
+    <a href="gallery.html">📷 Галерия</a>
+
+    <a href="contact.html">📩 Контакти</a>
+
+</div>
+
+
+<div id="menuOverlay"
+     class="menu-overlay"
+     onclick="closeMenu()">
+</div>
+
+
+<main>
+
+
+    <!-- ДОБРЕ ДОШЛИ -->
+
+    <section class="card">
+
+        <h2>Добре дошли!</h2>
+
+        <p>
+            Спортът е важна част от активния начин на живот.
+            Редовното движение подпомага физическата активност,
+            доброто настроение и изграждането на полезни навици.
+        </p>
+
+        <p>
+            На този сайт ще откриете полезна информация за спорта,
+            различни спортни дейности и начини за поддържане на
+            активен начин на живот.
+        </p>
+
+    </section>
+
+
+    <!-- ЗАЩО СПОРТЪТ Е ВАЖЕН -->
+
+    <section class="card">
+
+        <h2>Защо спортът е важен?</h2>
+
+        <ul>
+
+            <li>
+                Подпомага поддържането на добра физическа форма.
+            </li>
+
+            <li>
+                Насърчава активния начин на живот.
+            </li>
+
+            <li>
+                Помага за изграждането на дисциплина и постоянство.
+            </li>
+
+            <li>
+                Създава възможности за социални контакти.
+            </li>
+
+            <li>
+                Дава възможност за разнообразно и приятно свободно време.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ОТКРИЙ СВОЯ СПОРТ -->
+
+    <section class="card">
+
+        <h2>Открий своя спорт</h2>
+
+        <p>
+            Футбол, баскетбол, плуване, тенис, колоездене,
+            лека атлетика или друг спорт — важното е да намериш
+            физическа активност, която ти доставя удоволствие.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Спорт | Активният начин на живот започва с движение.
+    </p>
+
+</footer>
+
+
+<script>
+
+    function openMenu() {
+
+        document.getElementById("sideMenu")
+            .classList.add("active");
+
+        document.getElementById("menuOverlay")
+            .classList.add("active");
+
+    }
+
+
+    function closeMenu() {
+
+        document.getElementById("sideMenu")
+            .classList.remove("active");
+
+        document.getElementById("menuOverlay")
+            .classList.remove("active");
+
+    }
+
+
+    function toggleSubmenu(id) {
+
+        document.getElementById(id)
+            .classList.toggle("active");
+
+    }
+
+</script>
+
+</body>
+
+</html>
+```

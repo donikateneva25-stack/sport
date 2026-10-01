@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Спорт | Контакти</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Свържете се с нас</h1>
+  <p>Вашето мнение е важно за нас</p>
+</header>
+
+<nav>
+  <a href="index.html">Начало</a>
+  <a href="info.html">Информация</a>
+  <a href="gallery.html">Галерия</a>
+  <a href="contact.html">Контакти</a>
+</nav>
+
+<main>
+
+  <section class="card">
+    <h2>Контактна форма</h2>
+
+    <form action="#" method="post">
+
+      <label for="name">Име:</label>
+      <input type="text" id="name" name="name"
+             placeholder="Въведете име"
+             required minlength="2">
+
+      <label for="email">Имейл:</label>
+      <input type="email" id="email" name="email"
+             placeholder="example@email.com"
+             required>
+
+      <label for="sport">Любим спорт:</label>
+      <select id="sport" name="sport" required>
+        <option value="">Изберете спорт</option>
+        <option value="football">Футбол</option>
+        <option value="basketball">Баскетбол</option>
+        <option value="tennis">Тенис</option>
+        <option value="swimming">Плуване</option>
+        <option value="cycling">Колоездене</option>
+        <option value="running">Бягане</option>
+      </select>
+
+      <label for="message">Съобщение:</label>
+      <textarea id="message" name="message"
+                placeholder="Напишете вашето мнение..."
+                required minlength="10"></textarea>
+
+      <label class="checkbox">
+        <input type="checkbox" required>
+        Съгласявам се с обработването на данните.
+      </label>
+
+      <button type="submit">Изпрати</button>
+
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Спорт | Контакти</p>
+</footer>
+
+</body>
+</html>

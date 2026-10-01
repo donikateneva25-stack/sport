@@ -1,0 +1,489 @@
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Arial, sans-serif;
+background: #f4f7f6;
+color: #17211f;
+line-height: 1.6;
+}
+
+/* HEADER */
+
+header.hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 22px;
+}
+
+
+header h1 {
+font-size: 52px;
+font-weight: 800;
+letter-spacing: 2px;
+margin-bottom: 10px;
+}
+
+header p {
+font-size: 18px;
+opacity: 0.9;
+letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+
+nav {
+position: sticky;
+top: 0;
+z-index: 1000;
+
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+
+padding: 16px 20px;
+
+background: rgba(255, 255, 255, 0.96);
+border-bottom: 1px solid #e2e8e5;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+nav a {
+color: #183a34;
+text-decoration: none;
+font-weight: 600;
+padding: 10px 20px;
+border-radius: 30px;
+transition: all 0.3s ease;
+}
+
+nav a:hover {
+background: #16715f;
+color: white;
+transform: translateY(-2px);
+}
+
+/* MAIN */
+
+main {
+max-width: 1200px;
+margin: 0 auto;
+padding: 60px 25px;
+}
+
+/* SECTIONS */
+
+section {
+margin-bottom: 50px;
+}
+
+section h2 {
+text-align: center;
+font-size: 34px;
+color: #123f36;
+margin-bottom: 15px;
+}
+
+section p {
+max-width: 800px;
+margin: 0 auto;
+}
+
+/* CARDS */
+
+.card {
+background: white;
+padding: 35px;
+border-radius: 20px;
+margin: 30px auto;
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+border: 1px solid #e8eeeb;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 18px 45px rgba(0, 0, 0, 0.11);
+}
+
+.card h2 {
+text-align: left;
+}
+
+/* GALLERY */
+
+.gallery-section {
+text-align: center;
+}
+
+.gallery-intro {
+color: #66736f;
+margin-bottom: 40px;
+font-size: 17px;
+}
+
+.gallery {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 24px;
+margin-top: 35px;
+}
+
+.gallery-item {
+position: relative;
+overflow: hidden;
+height: 280px;
+border-radius: 20px;
+background: #dfe7e4;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+cursor: pointer;
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item::after {
+content: “SPORT”;
+position: absolute;
+left: 18px;
+bottom: 18px;
+
+background: rgba(255, 255, 255, 0.92);
+color: #123f36;
+
+padding: 7px 13px;
+border-radius: 20px;
+
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1px;
+
+opacity: 0;
+transform: translateY(10px);
+transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+transform: scale(1.08);
+filter: brightness(0.85);
+}
+
+.gallery-item:hover::after {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* FOOTER */
+
+footer {
+background: #102d28;
+color: white;
+text-align: center;
+padding: 30px 20px;
+margin-top: 40px;
+}
+
+footer p {
+font-size: 14px;
+opacity: 0.8;
+}
+
+/* BUTTONS */
+
+button {
+border: none;
+background: #16715f;
+color: white;
+padding: 13px 25px;
+border-radius: 30px;
+font-size: 15px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+button:hover {
+background: #0b3d35;
+transform: translateY(-2px);
+}
+
+/* LINKS */
+
+a {
+transition: all 0.3s ease;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+header {
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+nav {
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 8px 13px;
+    font-size: 14px;
+}
+
+main {
+    padding: 40px 18px;
+}
+
+.gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    height: 220px;
+}
+}
+
+@media (max-width: 500px) {
+
+header h1 {
+    font-size: 34px;
+}
+
+.gallery {
+    grid-template-columns: 1fr;
+}
+
+.gallery-item {
+    height: 260px;
+}
+
+section h2 {
+    font-size: 28px;
+}
+}
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: -1;
+}
+
+body {
+    position: relative;
+    background: transparent;
+}
+/* Падащо меню */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 8px 0;
+    z-index: 1000;
+}
+/* ===== СТРАНИЧНО МЕНЮ ===== */
+
+.main-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-button {
+    position: absolute;
+    left: 25px;
+    border: none;
+    background: none;
+    color: #222;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Страничният панел */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -360px;
+    width: 340px;
+    height: 100vh;
+    background: #171720;
+    color: white;
+    z-index: 1001;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu h2 {
+    font-size: 28px;
+    margin: 10px 0 30px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 38px;
+    cursor: pointer;
+}
+
+/* Основните елементи */
+
+.side-menu > a,
+.menu-category > button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 17px 5px;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.side-menu > a:hover,
+.menu-category > button:hover {
+    color: #35c6a0;
+}
+
+/* Подменю */
+
+.submenu {
+    display: none;
+    padding-left: 25px;
+}
+
+.submenu.active {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    padding: 12px 5px;
+    color: #bdbdc5;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.submenu a:hover {
+    color: #35c6a0;
+}
+
+/* Затъмняване на страницата */
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+    display: none;
+}
+
+.menu-overlay.active {
+    display: block;
+}
